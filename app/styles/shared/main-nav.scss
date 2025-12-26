@@ -1,0 +1,35 @@
+@use '../mixins/index' as m;
+@use '../mixins/viewport-sizes' as vs;
+
+nav.main-nav {
+  font-family: ScopeOne, serif;
+  font-size: var(--fs-xl);
+
+  a {
+    border-bottom: 1px solid var(--bg);
+    color: var(--accent);
+    display: inline-block;
+    line-height: 1.1;
+    padding-left: var(--xxs);
+    padding-right: var(--xxs);
+    text-decoration: none;
+
+    @include m.transition(border-bottom-color);
+    @include m.hover {
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+    }
+  }
+
+  @include vs.mobile-and-larger {
+    li {
+      display: inline-block;
+    }
+
+    li + li:before {
+      content: '/';
+      margin-left: var(--sm);
+      margin-right: var(--sm);
+    }
+  }
+}

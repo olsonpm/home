@@ -1,0 +1,36 @@
+@use '@/styles/mixins/index' as m;
+@use '@/styles/mixins/viewport-sizes' as vs;
+
+.project-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  li {
+    display: flex;
+  }
+
+  a {
+    background-color: var(--bg);
+    padding: 12px;
+
+    @include vs.mobile-and-smaller {
+      padding: 8px;
+    }
+
+    @include m.transition(background-color);
+    @include m.hover {
+      background-color: var(--bg-off-2);
+    }
+  }
+
+  .icon {
+    --icon-size: 32px;
+    height: var(--icon-size);
+    width: var(--icon-size);
+
+    @include vs.mobile-and-smaller {
+      --icon-size: 24px;
+    }
+  }
+}

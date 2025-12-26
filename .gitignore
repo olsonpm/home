@@ -1,0 +1,9 @@
+# nextjs
+/node_modules/
+/coverage
+/.next/
+/out/
+/build/
+/certificates/
+/.env.*
+/.env

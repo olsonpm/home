@@ -1,0 +1,39 @@
+@use '@/styles/mixins/viewport-sizes' as vs;
+
+header {
+  margin-top: var(--md);
+  text-align: center;
+
+  .hello {
+    font-family: ScopeOne, serif;
+    font-size: var(--fs-xl3);
+    margin-bottom: var(--xs);
+  }
+
+  img {
+    margin-bottom: var(--xs);
+    width: auto;
+  }
+
+  h1 {
+    font-size: var(--fs-lg);
+    margin-bottom: var(--md);
+  }
+
+  p.note {
+    font-size: var(--fs-sm);
+    margin-bottom: var(--md);
+  }
+
+  @include vs.tablet-and-larger {
+    img {
+      height: 220px;
+    }
+  }
+  @include vs.mobile-and-smaller {
+    img {
+      height: 180px;
+    }
+  }
+
+}

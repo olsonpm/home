@@ -1,0 +1,25 @@
+$common-scroll-padding-top: 16px;
+$transition-dur: 0.2s;
+$transition-dur-slow: 0.4s;
+
+/**
+ * custom breakpoints
+ * 1300+ desktop
+ * 900-1299 tablet
+ * 600-899 mobile
+ * 599- mobile small
+ */
+
+$content-size: 1300px;
+$desktop-min: $content-size;
+$tablet-max: $desktop-min - 0.1;
+$tablet-min: 900px;
+$mobile-max: $tablet-min - 0.1;
+$mobile-min: 600px;
+$mobile-small-max: $mobile-min - 0.1;
+
+:export {
+  commonScrollPaddingTop: $common-scroll-padding-top;
+  transitionDur: $transition-dur;
+  transitionDurSlow: $transition-dur-slow;
+}

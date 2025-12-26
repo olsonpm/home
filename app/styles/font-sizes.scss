@@ -1,0 +1,35 @@
+@use './mixins/viewport-sizes' as vs;
+
+:root {
+  --fs-xl3: 48px;
+  --fs-xl2: 36px;
+  --fs-xl: 30px;
+  --fs-lg: 26px;
+  --fs-md: 23px;
+  --fs-base: 20px;
+  --fs-sm: 18px;
+}
+
+@include vs.mobile {
+  :root {
+    --fs-xl3: 40px;
+    --fs-xl2: 30px;
+    --fs-xl: 26px;
+    --fs-lg: 23px;
+    --fs-md: 21px;
+    --fs-base: 19px;
+    --fs-sm: 17px;
+  }
+}
+
+@include vs.mobile-small {
+  :root {
+    --fs-xl3: 36px;
+    --fs-xl2: 28px;
+    --fs-xl: 24px;
+    --fs-lg: 22px;
+    --fs-md: 20px;
+    --fs-base: 18px;
+    --fs-sm: 16px;
+  }
+}

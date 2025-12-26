@@ -1,0 +1,159 @@
+@use './vars';
+@use './vars-spacing';
+@use './fonts';
+@use './font-sizes';
+@use './reset';
+@use './mixins/index' as m;
+@use './mixins/viewport-sizes' as vs;
+@use './shared/index';
+
+html {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-sm);
+  scroll-behavior: smooth;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  --main-padding-bottom: 100px;
+  margin-top: var(--xl);
+  padding-bottom: var(--main-padding-bottom);
+
+  @include vs.tablet {
+    --main-padding-bottom: 80px;
+  }
+  @include vs.mobile {
+    --main-padding-bottom: 60px;
+  }
+  @include vs.mobile-small {
+    --main-padding-bottom: 40px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: ScopeOne, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: var(--fs-xl3);
+}
+h2 {
+  font-size: var(--fs-xl2);
+}
+h3 {
+  font-size: var(--fs-lg);
+}
+h4,
+h5 {
+  font-size: var(--fs-sm);
+  margin-bottom: var(--xxs);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: var(--link);
+  text-decoration: none;
+}
+
+p.note {
+  font-style: italic;
+}
+
+.site-content {
+  margin: 0 auto;
+  max-width: var(--content-size);
+}
+
+main > section {
+  margin-top: var(--lg);
+  scroll-margin-top: 16px;
+
+  h2 {
+    color: var(--accent);
+    font-size: var(--fs-xl2);
+    margin-bottom: var(--xs);
+  }
+
+  h3 {
+    margin-bottom: var(--xxs);
+    margin-top: var(--md);
+  }
+  h4 {
+    margin-bottom: var(--xxs);
+  }
+  h5 {
+    margin-bottom: var(--xxs);
+    margin-top: var(--xs);
+  }
+  p + p {
+    margin-top: var(--xxs);
+  }
+  p + ul {
+    margin-top: var(--xs);
+  }
+}
+
+button.expander > svg {
+  height: 39px;
+  width: 39px;
+}
+
+.sidenote {
+  font-style: italic;
+}
+
+p,
+dd,
+dt {
+  font-size: var(--fs-sm);
+}
+
+a,
+a:hover {
+  text-decoration: underline;
+}
+
+@include m.theme-light {
+  .theme-dark {
+    display: none;
+  }
+}
+
+@include m.theme-dark {
+  .theme-light {
+    display: none;
+  }
+}
+
+@include vs.desktop {
+  .site-content {
+    padding-left: var(--lg);
+    padding-right: var(--lg);
+  }
+}
+@include vs.tablet-and-smaller {
+  .site-content {
+    padding-left: var(--md);
+    padding-right: var(--md);
+  }
+}

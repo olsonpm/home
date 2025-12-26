@@ -1,0 +1,40 @@
+@use '@/styles/mixins/index' as m;
+
+a.clickable-subheader {
+  align-items: center;
+  border-bottom: 1px solid var(--bg);
+  color: var(--accent);
+  display: flex;
+  font-size: var(--fs-xl2);
+  margin-bottom: var(--xs);
+  text-decoration: none;
+  width: fit-content;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .hashtag {
+    margin-left: var(--xxs);
+    opacity: 0;
+  }
+
+  & + h3 {
+    margin-top: 0;
+  }
+
+  @include m.hover {
+    border-bottom-color: var(--accent);
+    text-decoration: none;
+
+    .hashtag {
+      opacity: 1;
+    }
+  }
+
+  @include m.transition(border-bottom-color);
+
+  .hashtag {
+    @include m.transition(opacity);
+  }
+}

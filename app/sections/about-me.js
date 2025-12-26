@@ -1,0 +1,28 @@
+import ClickableSubheader from '@/cmpt/clickable-subheader'
+import { nbsp } from '@/utils'
+
+const AboutMe = () => (
+  <section id="about-me">
+    <ClickableSubheader text="About Me" />
+    <p>
+      I live in Milwaukee Wisconsin and am currently looking for my next web
+      development opportunity. I try very hard to keep busy with personal
+      projects as a means to learn new tools and become a better programmer.
+      Outside of that I enjoy foosball, a good beer and&nbsp;skiing.
+    </p>
+
+    <h3>{`What I'm looking for in a${nbsp}position`}</h3>
+    <p>
+      {`
+      I'm looking both for technical freedom and the opportunity to contribute to
+      a product I can be proud of.  I hold a high standard for the products I work
+      on, from how the website is hosted and deployed down to the end-user
+      experience.  Solving the gamut of issues presented by a product is something
+      I really enjoy, and so I hope to take on that responsibility in my
+      next${nbsp}position.
+      `}
+    </p>
+  </section>
+)
+
+export default AboutMe

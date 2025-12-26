@@ -1,0 +1,43 @@
+@use './mixins/viewport-sizes' as vs;
+
+:root {
+  --xl: 64px;
+  --lg: 54px;
+  --md: 36px;
+  --sm: 25px;
+  --xs: 18px;
+  --xxs: 8px;
+}
+
+@include vs.tablet {
+  :root {
+    --xl: 56px;
+    --lg: 46px;
+    --md: 30px;
+    --sm: 20px;
+    --xs: 14px;
+    --xxs: 6px;
+  }
+}
+
+@include vs.mobile {
+  :root {
+    --xl: 48px;
+    --lg: 38px;
+    --md: 24px;
+    --sm: 15px;
+    --xs: 10px;
+    --xxs: 4px;
+  }
+}
+
+@include vs.mobile-small {
+  :root {
+    --xl: 40px;
+    --lg: 30px;
+    --md: 18px;
+    --sm: 10px;
+    --xs: 8px;
+    --xxs: 4px;
+  }
+}

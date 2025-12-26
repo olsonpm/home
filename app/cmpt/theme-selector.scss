@@ -1,0 +1,67 @@
+@use '@/styles/mixins/index' as m;
+
+html:not([data-theme='dark']) .theme-selector > button {
+  .theme-dark {
+    display: none;
+  }
+}
+
+html[data-theme='dark'] .theme-selector > button {
+  .theme-light {
+    display: none;
+  }
+}
+
+.theme-selector {
+  align-items: center;
+  display: flex;
+  height: var(--top-bar-height);
+  position: relative;
+
+  > button {
+    align-items: center;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    height: var(--top-bar-height);
+    width: var(--top-bar-height);
+
+    @include m.transition(background-color);
+    @include m.hover {
+      background-color: var(--bg-off-2);
+    }
+
+    > .theme-icon {
+      height: var(--top-bar-icon-height);
+    }
+  }
+
+  .menu {
+    background-color: var(--bg);
+    border: 1px solid var(--fg);
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    right: 0;
+    top: calc(var(--top-bar-height) + 1px);
+    z-index: var(--z-theme-selector-menu);
+
+    > button {
+      display: block;
+      padding: 8px 12px;
+      text-align: left;
+      width: 100%;
+
+      &:before {
+        color: transparent;
+        content: '•';
+        margin-right: 4px;
+      }
+      &.active:before {
+        color: var(--fg);
+      }
+
+      @include m.transition-border;
+    }
+  }
+}

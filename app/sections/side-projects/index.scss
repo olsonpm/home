@@ -1,0 +1,28 @@
+@use '@/styles/mixins/viewport-sizes' as vs;
+
+#side-projects {
+  .project-list {
+    h3:first-of-type {
+      margin-top: var(--xs);
+    }
+
+    & > li + li {
+      margin-top: var(--xs);
+    }
+  }
+
+  .more-info-main {
+    font-family: ScopeOne, serif;
+    font-size: var(--fs-lg);
+    font-weight: 400;
+
+    @include vs.tablet-and-larger {
+      max-width: 400px;
+    }
+
+    .content {
+      position: relative;
+      top: 2px;
+    }
+  }
+}
