@@ -10,7 +10,7 @@
 }
 
 html[data-theme='dark'] {
-  --bg: #191919;
+  --bg: #121212;
   --bg-off: color-mix(in srgb, var(--bg), var(--fg) 8%); // #2b2b2b
   --bg-off-2: color-mix(in srgb, var(--bg), var(--fg) 16%); // #3b3b3b
   --bg-off-3: color-mix(in srgb, var(--bg), var(--fg) 24%); // #505050
