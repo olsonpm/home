@@ -12,8 +12,8 @@ const TopBar = () => (
       </a>
       <a
         className="github"
-        href="https://github.com/olsonpm/home"
-        title="See the source to this site on github"
+        href="https://github.com/olsonpm"
+        title="See my github profile"
         target="_blank"
       >
         <IconGithubLogo />
