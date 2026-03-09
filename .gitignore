@@ -5,5 +5,5 @@
 /out/
 /build/
 /certificates/
-/.env.*
 /.env
+/wrangler.jsonc

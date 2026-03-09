@@ -8,7 +8,7 @@
   },
   "routes": [
     {
-      "pattern": "philipolsonm.com",
+      "pattern": "{{NEXT_PUBLIC_DOMAIN}}",
       "custom_domain": true
     }
   ]

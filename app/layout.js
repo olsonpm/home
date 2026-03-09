@@ -1,9 +1,11 @@
 import { ThemeProvider } from 'next-themes'
 import TopBar from './cmpt/top-bar'
+import { domain } from './config'
 
 import './styles/site.scss'
 
 const metadata = {
+  metadataBase: new URL(`https://${domain}.com`),
   icons: {
     icon: [
       { url: '/images/favicon.16.png', sizes: '16x16' },
