@@ -1,3 +1,5 @@
+@use '../styles/mixins/viewport-sizes' as vs;
+
 #page-ux-clips {
   margin-top: var(--xl);
 
@@ -7,6 +9,18 @@
 
   .main-nav {
     margin-top: var(--md);
+
+    @include vs.desktop {
+      li {
+        display: inline-block;
+      }
+
+      li + li:before {
+        content: '/';
+        margin-left: var(--sm);
+        margin-right: var(--sm);
+      }
+    }
   }
 
   video {

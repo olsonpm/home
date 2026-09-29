@@ -1,16 +1,98 @@
 'use client'
 
 import ClickableSubHeader from '@/cmpt/clickable-subheader'
+import { nbsp } from '@/utils'
 import cbg from './videos/cbg-ux.mp4'
 import cfp from './videos/cfp-ux.mp4'
 import ptq from './videos/ptq-ux.mp4'
+import peachPieStudioClip from './videos/peach-pie-studio-ux.mp4'
+import peachPieWebTemplateClip from './videos/peach-pie-web-template-ux.mp4'
 
 import './sections.scss'
 
-const clipPath = { cbg, cfp, ptq }
+const clipPath = {
+  cbg,
+  cfp,
+  ptq,
+  peachPie: {
+    studio: peachPieStudioClip,
+    webTemplate: peachPieWebTemplateClip,
+  },
+}
 
 const Sections = () => (
   <>
+    <section id="peach-pie">
+      <ClickableSubHeader text="Peach Pie" />
+      <p>
+        {`
+          This is a restaurant CMS I've been working on.  The idea being I
+          create and pitch templates which are easy to edit for
+          normal${nbsp}folk.
+        `}
+      </p>
+      <p>
+        {`
+          Note the goal is not to be another generic CMS, for example
+          restaurant managers can update verbage and images, but not the
+          overall${nbsp}design.
+        `}
+      </p>
+      <p>{`Here's some important tooling I used:`}</p>
+      <ul className="peach-pie-tooling">
+        <li>
+          <a href="https://nextjs.org/" target="_blank">
+            Next.js
+          </a>
+        </li>
+        <li>
+          <a href="https://better-auth.com/" target="_blank">
+            Better Auth
+          </a>
+        </li>
+        <li>
+          <a href="https://stripe.com/" target="_blank">
+            Stripe
+          </a>
+        </li>
+        <li>
+          <a href="https://hono.dev/" target="_blank">
+            Hono
+          </a>
+        </li>
+        <li>
+          <a href="https://www.dragonflydb.io/" target="_blank">
+            Dragonfly
+          </a>
+        </li>
+        <li>
+          <a href="https://seaweedfs.com/" target="_blank">
+            SeaweedFS
+          </a>
+        </li>
+      </ul>
+
+      <p className="peach-pie-web-template">
+        {`
+          This video shows some features of Peach Pie.  Specifically I sign up,
+          create a support ticket, add a Stripe payment method, and finally
+          delete my${nbsp}account.
+        `}
+      </p>
+      <video id="peach-pie-studio-ux" src={clipPath.peachPie.studio} controls />
+
+      <p className="peach-pie-web-template">
+        {`
+          Here's a an example template I built along with a few
+          editing${nbsp}capabilities
+        `}
+      </p>
+      <video
+        id="peach-pie-web-template-ux"
+        src={clipPath.peachPie.webTemplate}
+        controls
+      />
+    </section>
     <section id="common-fp">
       <ClickableSubHeader text="Common FP" />
       <p>

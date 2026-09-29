@@ -24,6 +24,9 @@ const UxClips = () => (
       <nav className="main-nav">
         <ol className="reset">
           <li>
+            <a href="#peach-pie">Peach Pie</a>
+          </li>
+          <li>
             <a href="#common-fp">Common FP</a>
           </li>
           <li>

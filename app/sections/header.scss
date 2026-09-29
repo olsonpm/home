@@ -36,4 +36,17 @@ header {
     }
   }
 
+  .main-nav {
+    @include vs.mobile-and-larger {
+      li {
+        display: inline-block;
+      }
+
+      li + li:before {
+        content: '/';
+        margin-left: var(--sm);
+        margin-right: var(--sm);
+      }
+    }
+  }
 }
