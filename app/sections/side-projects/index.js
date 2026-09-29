@@ -8,7 +8,7 @@ import './index.scss'
 
 const SideProjects = () => {
   const projects = [
-    ['PeachPie', details.PeachPie],
+    ['Peach Pie', details.PeachPie],
     ['Common FP', details.CommonFP],
     ['Condo Budget Graphs', details.CondoBudgetGraphs],
     ['Pass The Quill', details.PassTheQuill],
