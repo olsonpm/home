@@ -83,8 +83,9 @@ const Sections = () => (
 
       <p className="peach-pie-web-template">
         {`
-          Here's a an example template I built along with a few
-          editing${nbsp}capabilities
+          Here's a an example template I built along with a few editing
+          capabilities.  Eventually this will be integrated into Peach Pie
+          Studio as a${nbsp}service.
         `}
       </p>
       <video

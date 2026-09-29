@@ -21,7 +21,7 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
       - uses: ./.github/actions/next-cache
-      - run: pnpm install && pnpm build
+      - run: pnpm install --frozen-lockfile && pnpm build
       - run: ./scripts/build-wrangler-jsonc.sh
       - run: pnpx wrangler@4 deploy
         env:
