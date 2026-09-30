@@ -51,6 +51,11 @@ const Sections = () => (
           </a>
         </li>
         <li>
+          <a href="https://www.postgresql.org/" target="_blank">
+            PostgreSQL
+          </a>
+        </li>
+        <li>
           <a href="https://stripe.com/" target="_blank">
             Stripe
           </a>
